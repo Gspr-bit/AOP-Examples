@@ -1,0 +1,6 @@
+JDK 1.7: https://www.oracle.com/java/technologies/javase/javase7-archive-downloads.html
+
+Eclise 4.4: https://www.eclipse.org/downloads/packages/release/luna/r/eclipse-standard-44
+
+AJDT: https://www.eclipse.org/ajdt/downloads/
+Para instalar desde eclipse: http://download.eclipse.org/tools/ajdt/44/dev/update
