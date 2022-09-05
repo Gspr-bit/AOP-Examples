@@ -4,9 +4,7 @@ public class User {
     private boolean active;
 
     /* CONSTRUCTOR */
-    public User(String username,
-                String password)
-    {
+    public User(String username, String password) {
         this.username = username;
         this.password = password;
         this.active = false;
@@ -40,7 +38,7 @@ public class User {
 
     /* MÉTODOS */
     public void changePassword(String username, String oldPassword, String newPassword) throws LoginFailedException, InvalidDataException {
-        if (username != this.username || oldPassword != this.password) {
+        if (! (this.username.equals(username) && this.password.equals(oldPassword))) {
             throw new LoginFailedException("Nombre de usuario o contraseña incorrectos");
         } else if (newPassword.length() < 8) {
             throw new InvalidDataException("La contraseña debe contar con un mínimo de 8 dígitos");
@@ -51,7 +49,7 @@ public class User {
     }
 
     public void login(String username, String password) throws LoginFailedException {
-        if (username == this.username && password == this.password) {
+        if (this.username.equals(username) && this.password.equals(password)) {
             setActive(true);
             System.out.println(this.username + " ha iniciado sesión");
         } else {
